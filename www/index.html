@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+<head>
+    <title>Blank Cordova Mobile App Project Template (Lite)</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        
+        @-ms-viewport {
+            width: 100vw;
+            zoom: 100%;
+        }
+        
+        @viewport {
+            width: 100vw;
+            zoom: 100%;
+        }
+        
+        @-ms-viewport {
+            user-zoom: fixed;
+        }
+        
+        @viewport {
+            user-zoom: fixed;
+        }
+    </style>
+
+    <!--<link rel="Stylesheet" href="css/style.css" />-->
+    <link href="js/jQuery/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+    <script src="xdk/init-dev.js"></script>
+    <script src="js/jQuery/jquery-1.12.3.min.js"></script>
+    <script src="js/jQuery/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+
+<body>
+    <form id="mycontact" method="post" action="">
+
+        <label for="username">Name</label>
+        <input id="username" type="text" placeholder="First and last name" required autofocus pattern=" ">
+        <input type="hidden" id="id" />
+
+        <label for="useremail">Email</label>
+        <input id="useremail" type="text" placeholder="example@domain.com" required pattern=" ">
+
+    </form>
+    <div data-role="controlgroup" data-type="horizontal">
+        <a id="btnReset" class="ui-btn">Reset</a>
+        <a id="submitButton" class="ui-btn">Save</a>
+        <a id="btnUpdate" class="ui-btn">Update</a>
+        <a id="btnDrop" class="ui-btn">Drop</a>
+    </div>
+    <br />
+    <ul id="results" data-role="listview"></ul>
+
+</body>
+
+
+<script type="text/javascript" src="js/sqLite.js"></script>
+
+</html>
