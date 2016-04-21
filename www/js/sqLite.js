@@ -114,14 +114,9 @@ function onDeviceReady() {
                 dataset = result.rows;
                 for (var i = 0, item = null; i < dataset.length; i++) {
                     item = dataset.item(i);
+                    //Create Name+Shoesize
                     var data_entry = '<li>' + '<h2>' + item['username'] + ' , ' + item['useremail'] + ' </h2>' + ' </li>';
                     $("#results").append(data_entry);
-                    //Create Delete Button
-                    $('<div/>', {
-                        'id': 'index' + i,
-                        'class': 'input',
-                        'text': 'index=' + i,
-                    }).appendTo("#results");
                     //Create Delete Button
                     $('<div/>', {
                         //'id': 'delete' + i,
@@ -138,11 +133,6 @@ function onDeviceReady() {
                     }).on('click', function () {
                         loadRecord(i);
                     }).appendTo("#results");
-                    //                    var linkeditdelete = '<li>' + item['username'] + ' , ' + item['useremail'] + '    ' + '<a href="#" onclick="loadRecord(' + i + ');">edit</a>' + '    ' +
-                    //
-                    //                        '<a href="#" onclick="deleteRecord(' + item['id'] + ');">delete</a></li>';
-                    //
-                    //                    $("#results").append(linkeditdelete);
                 };
 
             });
